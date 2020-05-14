@@ -1,10 +1,18 @@
-# WavescrapeWorkspace
+# Wavescrape
 
 This project was generated using [Nx](https://nx.dev).
 
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png" width="450"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png" width="100"></p>
 
 🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
+## Project's History
+This project was migrated from another repo.  
+
+To see this project's previous commit history (pre-migration),  
+please visit https://github.com/dev-mDavid/WaveScrape.
+
+I migrated this project into a monorepo by Nrwl to allow for faster testing with modern tools (i.e. Jest and Cypress).
+
 
 ## Quick Start & Documentation
 
