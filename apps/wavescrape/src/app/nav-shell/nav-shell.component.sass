@@ -1,0 +1,175 @@
+@use '../shared/helpers' as h-
+@use '../shared/colors'
+@use '../shared/fonts'
+
+/* Reusable/Global Variables for this Component */
+.c-global__title
+  color: colors.$color--white  
+  font-size: 28px
+  font-family: fonts.$font--logo
+
+.c-global__icons
+  color: colors.$color--white
+  font-size: 30px
+  
+  
+/* Local Variables for this Component by Device Sizes */  
+.mmt-nav-shell  
+  .f-mobile  
+    mat-toolbar-row
+    .c-mobile-toolbar--nav-top
+      background-color: colors.$color--darkPrimary
+      color: colors.$color--white  
+      .nav-logo
+        font-family: fonts.$font--logo
+        font-size: 28px
+        text-align: center
+      .nav-profile
+        mat-icon
+          @extend .c-global__icons          
+          float: right
+          margin-top: -4px
+          margin-right: 15px
+
+    .l-mobile-flexbox--top
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+      &-item
+        // background-color: red // indicator    
+        width: 100%
+      nav
+        &-right
+        &-center
+          text-align: center
+        &-left
+
+      
+    .toolbar--nav-bottom
+      height: 75px
+      background-color: colors.$color--darkPrimary
+      color: colors.$color--white
+      bottom: 0
+      position: fixed
+      mat-icon
+        font-size: 28px    
+        margin-top: 12px
+        margin-left: 40%
+
+    .flex--bottom
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+      &-item
+        // background-color: green  // indicator
+        // border: 1px solid black // indicator
+        width: 100%
+        a
+          
+    .icon-outline
+      // background-color: red // indicator
+      width: 40px
+      height: 40px
+      border: 2px solid colors.$color--white
+      border-radius: 15px
+      margin-top: 5px
+      margin-left: 40%
+      mat-icon
+        margin-top: 5px
+        margin-left: 6px
+
+    .c-nav__link--disabled
+      display: none
+
+  .f-tablet
+    .l-top-toolbar
+      display: flex
+      
+      .l-toolbar__section
+        flex: 1
+        
+        &--1
+        &--2
+          display: flex
+          .l-title
+            margin: auto            
+        &--3
+          display: flex
+          justify-content: flex-end          
+          button // l- layout
+            margin: auto 20px
+          
+    .c-top-toolbar
+      width: 100%
+      background-color: colors.$color--darkPrimary
+    
+    .c-title
+      @extend .c-global__title      
+    
+    .c-nav__button
+      background-color: colors.$color--darkPrimary
+      border: none
+
+    mat-icon // c- content
+      @extend .c-global__icons
+
+  .f-desktop
+    mat-toolbar // l- layout
+      mat-toolbar-row // l- layout
+        display: flex        
+        .l-toolbar--section
+          &__1
+            // @include h-.ind__lo(parent, green)
+            flex: 1
+            margin-left: 20px
+          &__2
+            flex: 3
+            .l-nav
+              display: flex
+              justify-content: center
+              .l-nav__link
+
+                display: flex
+                flex: 1                                
+                flex-basis: auto
+                // margin: auto 5px
+                // @include h-.ind__lo()
+                &__1
+                &__2
+                &__3
+                &__4
+                &__5
+                a // l- layout
+                  display: flex
+                  margin: auto
+                  color: colors.$color--white
+                  mat-icon // l- layout
+                    // @include h-.ind__lo(child, orange)
+                    margin: auto
+                    // margin: auto 0
+          &__3
+            // @include h-.ind__lo()
+            flex: 1
+            display: flex
+            justify-content: flex-end          
+            margin-right: 20px
+                    
+
+    mat-toolbar-row // c- content
+      background-color: colors.$color--darkPrimary
+
+    .c-title
+      @extend .c-global__title
+
+    .c-nav__links
+      color: colors.$color--white
+      font-size: 14px
+      text-transform: uppercase
+      letter-spacing: 1.2px
+    
+    .c-profile__button
+      background-color: colors.$color--darkPrimary
+      border: none
+
+      mat-icon
+        @extend .c-global__icons
