@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-// import { GoogleSigninDirective } from "./user/google-signin.directive";
+import { GoogleSigninDirective } from './user/google-signin.directive';
 
 @NgModule({
-  // declarations: [GoogleSigninDirective],
+  declarations: [GoogleSigninDirective],
   imports: [
     CommonModule
   ],
-  // exports: [GoogleSigninDirective]
+  exports: [GoogleSigninDirective]
 })
 export class CoreModule { }
