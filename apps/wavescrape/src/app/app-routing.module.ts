@@ -4,9 +4,9 @@ import { HomePageComponent } from "./home-page/home-page.component";
 
 
 const routes: Routes = [
-  { path: '', component: HomePageComponent }
-  // { path: 'admin', loadChildren: () => import('./admin-page/admin.module').then(m => m.AdminModule) },
-  // { path: 'current', loadChildren: () => import('./current-page/current.module').then(m => m.CurrentModule) }
+  { path: '', component: HomePageComponent },
+  { path: 'admin', loadChildren: () => import('./admin-page/admin-page.module').then(m => m.AdminPageModule) },
+  { path: 'current', loadChildren: () => import('./current-page/current-page.module').then(m => m.CurrentPageModule) }
 ];
 
 @NgModule({
