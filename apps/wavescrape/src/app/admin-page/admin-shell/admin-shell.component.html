@@ -1,1 +1,46 @@
-<p>admin-shell works!</p>
+<div class="admin--nav-shell">
+
+  <!-- mobile/isHandsetPortrait$ || not tablet/isTabletLandscape -->
+  <div class="f-mobile" *ngIf="(isHandset$ | async) === true">
+    <h3>Please use Desktop/Laptop</h3>
+  </div>
+  <!-- tablet/isTabletLandscape$ || not phone -->
+  <div class="f-tablet" *ngIf="((isTablet$ | async) === true)">
+    <h3>Please use Desktop/Laptop</h3>
+  </div>
+
+  <!-- desktop/laptop ||  -->
+  <div class="f-desktop" *ngIf="(isWeb$ | async) === true">
+    <button type="button" aria-label="Toggle sidnav" mat-icon-button (click)="drawer.toggle()">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+
+    <mat-sidenav-container class="sidenav-container">
+      <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="false">
+        <button type="button" aria-label="Toggle sidnav" mat-icon-button (click)="drawer.toggle()">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <!-- <mat-toolbar>
+            Admin
+          </mat-toolbar> -->
+
+        <mat-nav-list>
+
+          <mat-toolbar>
+            <a mat-list-item routerLink="/admin/">Admin Home</a>
+          </mat-toolbar>
+
+          <a mat-list-item routerLink="/admin/countries">Countries</a>
+          <a mat-list-item routerLink="/admin/states">States</a>
+          <a mat-list-item routerLink="/admin/regions">Regions</a>
+          <a mat-list-item routerLink="/admin/breaks">Breaks</a>
+
+        </mat-nav-list>
+
+      </mat-sidenav>
+    </mat-sidenav-container>
+  </div>
+
+  <ng-content></ng-content>
+</div>

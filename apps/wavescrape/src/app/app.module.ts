@@ -7,11 +7,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from "./shared/shared.module";
 import { CoreModule } from './core/core.module';
 
-// import { environment } from "apps/wavescrape/src/environments/environment";
+import { environment } from "apps/wavescrape/src/environments/environment";
 
-// import { AngularFireModule } from '@angular/fire';
-// import { AngularFirestoreModule } from '@angular/fire/firestore';
-// import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 @NgModule({
   declarations: [
     AppComponent
@@ -22,9 +22,9 @@ import { CoreModule } from './core/core.module';
     BrowserAnimationsModule,
     SharedModule,
     CoreModule,
-    // AngularFireModule.initializeApp(environment.firebase),
-    // AngularFirestoreModule,
-    // AngularFireAuthModule
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
