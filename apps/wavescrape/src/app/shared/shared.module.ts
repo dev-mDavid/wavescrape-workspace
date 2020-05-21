@@ -28,8 +28,8 @@ const modules = [
   MatListModule
 ];
 @NgModule({
-  declarations: [...components],
-  imports: [...modules],
-  exports: [...components, ...modules]
+  declarations: [ ...components ],
+  imports: [ ...modules ],
+  exports: [ ...components, ...modules ]
 })
 export class SharedModule {}
