@@ -31,7 +31,7 @@ export class AdminBreaksPageComponent implements OnInit, OnDestroy {
 
   regionsByStates: RegionsByState[];
   breaksByRegions: BreaksByRegion[];
-  breaksCurrent: BreakCurrent[];
+  breaksCurrent: BreaksCurrent[];
   sub: Subscription;
   // dialog: MatDialog;
   selectedBreakName: string;
@@ -108,7 +108,7 @@ export class AdminBreaksPageComponent implements OnInit, OnDestroy {
   accessBreakCurrentDocByBreak() { }
 
   breakCurrentQuery(breakValue: string) {
-    return this.db.collection<BreakCurrent>("breaksCurrent", ref =>
+    return this.db.collection<BreaksCurrent>("breaksCurrent", ref =>
       ref.where('break', '==', breakValue))
       .valueChanges();
 
