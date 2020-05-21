@@ -1,10 +1,15 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AdminShellComponent } from './admin-shell.component';
-import { MatIconModule } from "@angular/material/icon";
-import { MatSidenavModule } from "@angular/material/sidenav";
-import { MatToolbarModule } from "@angular/material/toolbar";
-import { MatListModule } from "@angular/material/list";
+// import { MatIconModule } from "@angular/material/icon";
+// import { MatSidenavModule } from "@angular/material/sidenav";
+// import { MatToolbarModule } from "@angular/material/toolbar";
+// import { MatListModule } from "@angular/material/list";
+
+// import { AdminPageModule  } from "../admin-page.module";
+import { SharedModule } from "../../shared/shared.module";
+import { AdminFeatureModule } from '../admin-feature/admin-feature.module';
+
 describe('AdminShellComponent', () => {
   let component: AdminShellComponent;
   let fixture: ComponentFixture<AdminShellComponent>;
@@ -13,10 +18,12 @@ describe('AdminShellComponent', () => {
     TestBed.configureTestingModule({
       declarations: [AdminShellComponent],
       imports: [
-        MatIconModule, 
-        MatSidenavModule, 
-        MatToolbarModule,
-        MatListModule
+        // AdminPageModule,
+        AdminFeatureModule
+        // MatIconModule,
+        // MatSidenavModule,
+        // MatToolbarModule,
+        // MatListModule
       ]
     }).compileComponents();
   }));

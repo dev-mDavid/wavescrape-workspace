@@ -15,37 +15,19 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon'; 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { AdminFeatureModule } from './admin-feature/admin-feature.module';
 
-const components = [
-  AdminShellComponent,
-  AdminPageComponent,
-  AdminBreaksPageComponent,
-  AddBreakDialogComponent
-];
-
-const modules = [
-  SharedModule,
-  CommonModule,
-  AdminPageRoutingModule,
-  // MatSidenavModule,
-  MatListModule,
-  MatIconModule,
-  MatDialogModule,
-  MatToolbarModule,
-  // MatFormField,
-  MatInputModule,
-  FormsModule
-];
 @NgModule({
   declarations: [
-  ... components
+    AdminShellComponent,
+    AdminPageComponent,
+    AdminBreaksPageComponent,
+    AddBreakDialogComponent
   ],
   imports: [
-  ... modules    
-  ],
-  exports:[
-    ... components,
-    ...modules
+    CommonModule, 
+    AdminPageRoutingModule,
+    AdminFeatureModule
   ]
 })
 export class AdminPageModule {}

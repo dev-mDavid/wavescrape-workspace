@@ -12,11 +12,9 @@ import { environment } from "apps/wavescrape/src/environments/environment";
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import { TestMeComponent } from './test-me/test-me.component';
 @NgModule({
   declarations: [
-    AppComponent,
-    TestMeComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
