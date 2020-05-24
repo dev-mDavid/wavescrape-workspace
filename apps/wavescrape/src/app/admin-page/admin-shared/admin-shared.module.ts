@@ -8,28 +8,21 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { AdminShellModule } from '../admin-shell/admin-shell.module';
 
-const featureModules = [
+const modules = [
+  CommonModule,
+  SharedModule,
+  AdminShellModule,
   MatSidenavModule,
-  MatListModule,
-  MatIconModule,
   MatDialogModule,
-  MatToolbarModule,
-  // MatFormField,
   MatInputModule,
   FormsModule
 ];
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    SharedModule,
-    ... featureModules    
-  ],
-  exports: [
-    ... featureModules
-  ]
+  imports: [...modules],
+  exports: [...modules]
 })
-export class AdminFeatureModule {}
+export class AdminSharedModule {}

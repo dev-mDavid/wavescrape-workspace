@@ -8,7 +8,7 @@ import { AdminShellComponent } from './admin-shell.component';
 
 // import { AdminPageModule  } from "../admin-page.module";
 import { SharedModule } from "../../shared/shared.module";
-import { AdminFeatureModule } from '../admin-feature/admin-feature.module';
+import { AdminSharedModule } from '../admin-shared/admin-shared.module';
 
 describe('AdminShellComponent', () => {
   let component: AdminShellComponent;
@@ -19,7 +19,7 @@ describe('AdminShellComponent', () => {
       declarations: [AdminShellComponent],
       imports: [
         // AdminPageModule,
-        AdminFeatureModule
+        AdminSharedModule
         // MatIconModule,
         // MatSidenavModule,
         // MatToolbarModule,

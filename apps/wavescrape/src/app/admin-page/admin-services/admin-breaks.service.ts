@@ -11,7 +11,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AdminBreaksService {
-
+  
   constructor(private db: AngularFirestore) { }
 
   /**

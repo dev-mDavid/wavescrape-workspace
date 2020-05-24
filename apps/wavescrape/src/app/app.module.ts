@@ -12,19 +12,23 @@ import { environment } from "apps/wavescrape/src/environments/environment";
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+// import { HomePageComponent } from './home-page/home-page.component';
+import { NavShellComponent } from './nav-shell/nav-shell.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, 
+    NavShellComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SharedModule,
     CoreModule,
+    SharedModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    // NavShellModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

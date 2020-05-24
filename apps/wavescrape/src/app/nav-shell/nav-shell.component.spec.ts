@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NavShellComponent } from './nav-shell.component';
+import { SharedModule } from '../shared/shared.module';
 
 describe('NavShellComponent', () => {
   let component: NavShellComponent;
@@ -8,7 +9,9 @@ describe('NavShellComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NavShellComponent ]
+      declarations: [ NavShellComponent ],
+      imports: [ SharedModule ]
+
     })
     .compileComponents();
   }));

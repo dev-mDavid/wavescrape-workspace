@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AdminPageRoutingModule } from './admin-page-routing.module';
-import { AdminFeatureModule } from './admin-feature/admin-feature.module';
+import { AdminSharedModule } from './admin-shared/admin-shared.module';
 
 import { AdminPageComponent } from './admin-page.component';
 import { AdminShellComponent } from './admin-shell/admin-shell.component';
@@ -12,15 +12,15 @@ import { AddBreakDialogComponent } from './admin-dialogs/add-break-dialog/add-br
 
 @NgModule({
   declarations: [
-    AdminPageComponent,
+    AdminPageComponent,    
     AdminShellComponent,
     AdminBreaksPageComponent,
-    AddBreakDialogComponent
+    AddBreakDialogComponent,
   ],
-  imports: [
+  imports: [    
     CommonModule, 
     AdminPageRoutingModule,
-    AdminFeatureModule
+    AdminSharedModule
   ]
 })
 export class AdminPageModule {}
