@@ -3,7 +3,7 @@ import { AngularFirestore } from "@angular/fire/firestore";
 import * as firebase from 'firebase/app';
 
 
-import { RegionsByState, StringArray } from "../../core/models/regions-by-state.model";
+import { RegionsByState } from "../../core/models/regions-by-state.model";
 import { BreaksByRegion } from "../../core/models/breaks-by-region.model";
 import { map } from 'rxjs/operators';
 
@@ -26,7 +26,6 @@ export class AdminBreaksService {
       .valueChanges()
   }
 
-  // }
   /**
    * Reads all Docs from breaksByRegion (collection) by the value of the region
    */

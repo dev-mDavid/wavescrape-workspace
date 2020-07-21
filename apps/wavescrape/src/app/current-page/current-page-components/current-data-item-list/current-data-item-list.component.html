@@ -1,1 +1,151 @@
-<p>current-data-item-list works!</p>
+<div class="current-data-item__list">
+  <div class="c-header-item">
+    <div class="c-header-item--innie">
+      <div class="l-item-contents__flex-row">
+        <div class="l-flex-row__items l-flex-row-item__1">
+          <mat-icon class="l-icon c-icon__star">star</mat-icon>
+        </div>
+
+        <div class="l-flex-row__items l-flex-row-item__2">
+          <div class="l-dynamic-data__flex-col">
+            <div class="l-flex-col__items l-flex-col-item__1">
+              <!-- <div *ngFor="let currentBreak of currentBreaks | async"> -->
+              <h3 class="l-text c-text__item-title">{{(currentBreak | async)?.break}}</h3>
+              <!-- </div> -->
+              <h3 class="l-text c-text__item-title"> {{(currentBreak | async)?.region}}</h3>
+            </div>
+            <div class="l-flex-col__items l-flex-col-item__2">
+              <hr>
+            </div>
+            <div class="l-flex-col__items l-flex-col-item__3">
+
+              <div class="l-quick-preview__flex-row">
+                <div class="l-flex-row__items l-flex-row-item__icon">
+                  <mat-icon class="l-icon__done ">done</mat-icon>
+                </div>
+                <div class="l-flex-row__items l-flex-row-item__text">
+                  <h4 class="c-text__quick-preview">3/2 Wetsuit</h4>
+                </div>
+                <div class="l-flex-row__items l-flex-row-item__text">
+                  <h4 class="c-text__quick-preview">8-12ft</h4>
+                </div>
+                <div class="l-flex-row__items l-flex-row-item__text">
+                  <h4 class="c-text__quick-preview">SSW</h4>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="l-flex-row__items l-flex-row-item__3" (click)="toggleExpand()">
+          <mat-icon class="l-icon c-icon__expand">{{ expandIcon }}</mat-icon>
+        </div>
+      </div>
+      <div class="c-current-data">
+        <div class="l-current-data--flex-row">
+          <div class="l-current-data-flex--item l-current-data-flex--item__1">
+            <div class="c-dynamic-data">
+              <div class="l-dynamic-data--flex-col">
+                <div class="l-dynamic-data-flex--item l-dynamic-data-flex--item__1">
+                  <h4>
+                    Wave <br>&nbsp;&nbsp;
+                    Size <br>&nbsp;&nbsp;
+                    Energy
+                  </h4>
+                  <h4>
+                    Swell <br>&nbsp;&nbsp;
+                    Direction <br>&nbsp;&nbsp;
+                    Size <br>&nbsp;&nbsp;
+                    Period
+                  </h4>
+                  <h4>
+                    Tide <br>&nbsp;&nbsp;
+                    Height <br>&nbsp;&nbsp;
+                    Direction
+                  </h4>
+                  <p *cdkPortal>4ft</p>
+                </div>
+                <div class="l-dynamic-data-flex--item l-dynamic-data-flex--item__2">
+                  <h4>
+                    Wind <br>&nbsp;&nbsp;
+                    Speed <br>&nbsp;&nbsp;
+                    Direction
+                  </h4>
+                  <h4>
+                    Temp <br>&nbsp;&nbsp;
+                    Air <br>&nbsp;&nbsp;
+                    Water
+                  </h4>
+                  <h4>Water Quality</h4>
+
+                  <h4>Moon Phase</h4>
+                  <h4></h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-current--data-flex--item l-current-data-flex--item__2">
+            <div class="c-time-slot--data">
+
+              <div class="c-time-slot--data__custom l-time-slot--data__custom">
+                <div class="l-icon--pointer c-icon-pointer">
+                  <mat-icon>label_important</mat-icon>
+                </div>
+                <div class="c-time--marker l-time--marker">
+                  <h4>4am
+                    <!-- {{breaksCurrent.find(elem => elem.breakName === 123).regionName}} -->
+                  </h4>
+                </div>
+                <div class="c-custom--text-status l-custom--text-status">
+                  <div class="l-custom-data-flex-box">
+                    <div class="l-custom-data-flex-box--item l-custom-data-flex-box--item__1">
+                      <p>2-3ft</p>
+                    </div>
+                    <div class="l-custom-data-flex-box--item l-custom-data-flex-box--item__2">
+                      <p>2-ft</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="c-time-slot--data__sun l-time-slot--data__sun">
+                <div class="l-icon--pointer">
+                  <!-- <mat-icon>label_important</mat-icon> -->
+                </div>
+                <div class="c-time--marker l-time--marker">
+                  <h4>4:37am</h4>
+                </div>
+                <div class="c-sun--text-status l-sun--text-status">
+                  <p>Civil Twilight</p>
+                </div>
+                <div class="c-sun--icon-status l-sun--icon-status">
+                  <mat-icon>wb_sunny</mat-icon>
+                </div>
+              </div>
+
+
+              <div class="c-time-slot--data__tides l-time-slot--data__tides">
+                <div class="l-icon--pointer">
+                  <!-- <mat-icon>label_important</mat-icon> -->
+                </div>
+                <div class="c-time--marker l-time--marker">
+                  <h4>6:37am</h4>
+                </div>
+                <div class="c-tides--text-status l-tides--text-status">
+                  <p>High Tide — 1.6 feet</p>
+                </div>
+                <div class="c-tides--icon-status l-tides--icon-status">
+                  <mat-icon>vertical_align_top</mat-icon>
+                </div>
+              </div>
+
+            </div>
+            <!-- <button [cdkPortalOutlet]></button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

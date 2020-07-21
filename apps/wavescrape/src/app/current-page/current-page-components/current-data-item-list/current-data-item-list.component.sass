@@ -1,0 +1,245 @@
+@use '../../../shared/helpers' as h-
+@use '../../../shared/colors'
+@use '../../../shared/fonts'
+
+
+
+$time-slot__height: 30px
+$time-slot--icon-pointer__margin-top: 6px
+$time-slot--icon-pointer__width: 30px
+
+$time-slot--time-text__margin-top: 6.5px
+$time-slot--custom-text__margin-top: 9.5px
+
+.current-data-item__list
+  .c-header-item
+    width: 100%
+    &--outie
+      margin: 10px 12.5px 20px
+      border-radius: 20px 0px 20px 20px
+      box-shadow: -4px -4px 10px 2px colors.$color--blue-lighten-rgba70, 4px 4px 10px 2px colors.$color--blue-darken-rgba30
+    &--innie
+      margin: 10px 12.5px 20px
+      box-shadow: -4px -4px 10px 2px inset colors.$color--blue-lighten-rgba70, 4px 4px 10px 2px inset colors.$color--blue-darken-rgba30
+    
+    .l-item-contents__flex-row
+      display: flex
+      .l-flex-row__items
+      .l-flex-row-item
+        &__1
+          $squareCenter: 50px
+          flex-basis: $squareCenter
+          height: $squareCenter
+          display: flex
+          .l-icon
+            margin: auto
+        &__2
+          flex: 1
+        &__3
+          $squareCenter: 50px
+          flex-basis: $squareCenter
+          height: $squareCenter
+          display: flex
+          .l-icon
+            float: right
+            margin: auto
+
+    .c-icon
+      &__star
+        font-size: 24px
+      &__expand
+        font-size: 24px
+
+    .l-dynamic-data__flex-col
+      display: flex
+      flex-direction: column
+
+      .l-flex-col__items
+      .l-flex-col-item
+        &__1
+          padding-top: 12px
+          padding-left: 6px
+          .l-text
+            margin-bottom: 0        
+        &__2
+        &__3
+          flex-basis: auto
+
+    .c-text
+      &__item-title
+        font-size: 20px
+
+    .l-quick-preview__flex-row
+      display: flex
+      flex-wrap: wrap
+      
+      .l-flex-row__items    
+        height: 32px
+      .l-flex-row-item
+        &__icon
+          flex-basis: 30px
+          padding-left: 6px
+        &__text   
+          flex-basis: 1
+          margin: 0 5px
+          h4
+            margin-top: 2px
+            
+    .c-icon__done
+      font-size: 24px
+      color: blue
+
+    .c-text__quick-preview
+      font-size: 18px
+
+  .c-current-data
+    .l-current-data--flex-row
+      // @include h-.ind__lo(parent, red)
+      padding-left: 12px
+      padding-right: 12px
+      .l-current-data-flex--item
+        &__1
+          // @include h-.vis__box($color: transparent)
+          // @include h-.ind__lo(child, green)
+
+        &__2
+          @include h-.vis__box($color: transparent)
+          // @include h-.ind__lo(child, yellow)
+    
+  .c-dynamic-data
+    .l-dynamic-data--flex-col
+      display: flex
+      .l-dynamic-data-flex--item
+        flex: 1
+
+        &__1
+        &__2
+    
+  .c-time-slot--data        
+    &__custom
+      .c-time--marker
+        h4
+          font-size: 18px
+      .c-custom--text-status        
+        p
+          font-size: 16px
+    &__sun      
+      .c-time--marker
+        h4
+          font-size: 18px
+      .c-sun--text-status
+        p
+          font-size: 16px
+      .c-sun--icon-status    
+        mat-icon
+          font-size: 32px
+    &__tides
+      .c-time--marker
+        h4
+          font-size: 18px
+      .c-tides--text-status
+        p
+          font-size: 16px
+      .c-tides--icon-status
+        mat-icon
+          font-size: 24px
+    .c-icon-pointer
+      mat-icon
+        color: colors.$color--orange
+    .l-time-slot--data      
+      &__custom
+        display: flex        
+
+        height: $time-slot__height
+        // @include h-.ind__lo
+        .l-icon--pointer           
+          flex-basis: 25px
+          margin: auto 0  
+          margin-top: $time-slot--icon-pointer__margin-top
+          flex-basis: $time-slot--icon-pointer__width
+          mat-icon            
+            // padding-left: 6px
+        .l-time--marker
+          flex-basis: 25px                              
+          margin-top: $time-slot--time-text__margin-top
+          h4            
+            margin: auto
+            // padding-left: 6px
+        .l-custom--text-status
+          margin: auto 0
+          margin-top: auto          
+          flex: 3          
+          .l-custom-data-flex-box
+            &--item
+              display: inline-block
+              margin: auto 0
+              margin-top: $time-slot--custom-text__margin-top - 0.5px
+              
+              // @include h-.ind__lo()
+              p
+                // margin: auto
+                padding-left: 6px
+              &__1
+      &__sun
+        display: flex        
+        height: $time-slot__height
+        // @include h-.ind__lo
+        .l-icon--pointer 
+          flex-basis: $time-slot--icon-pointer__width
+          margin: auto 0  
+          mat-icon            
+            // padding-left: 6px
+        .l-time--marker
+          flex-basis: 50px                              
+          margin-top: $time-slot--time-text__margin-top
+          h4            
+            margin: auto
+            // padding-left: 6px
+        .l-sun--text-status
+          margin: auto 0
+          margin-top: $time-slot--custom-text__margin-top
+          flex: 3
+          p
+            margin: auto
+            padding-left: 6px
+        .l-sun--icon-status
+          display: flex
+          justify-content: flex-end
+          flex: 1
+          flex-basis: 25px
+          margin: auto 0  
+          margin-top: 6px
+          padding-right: 20px 
+      &__tides
+        display: flex        
+        height: $time-slot__height
+        // @include h-.ind__lo(parent, orange)
+        .l-icon--pointer
+          flex-basis: $time-slot--icon-pointer__width
+          margin: auto 0  
+          mat-icon            
+            padding-left: 6px
+        .l-time--marker
+          flex-basis: 50px                              
+          margin-top: $time-slot--time-text__margin-top
+          h4            
+            margin: auto
+            // padding-left: 6px
+        .l-tides--text-status
+          margin: auto 0
+          margin-top: $time-slot--custom-text__margin-top
+          flex: 8          
+          // @include h-.ind__lo(child, green)
+          p
+            margin: auto
+            padding-left: 6px
+        .l-tides--icon-status
+          display: flex
+          justify-content: flex-end
+          flex: 1
+          flex-basis: 25px
+          margin: auto 0  
+          margin-top: 8px
+          padding-right: 16px 
+
+    

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomePageComponent } from './home-page.component';
 import { SharedModule } from '../shared/shared.module';
-import { NavShellModule } from '../nav-shell/nav-shell.module';
+// import { NavShellModule } from '../nav-shell/nav-shell.module';
 
 
 
@@ -10,7 +10,7 @@ import { NavShellModule } from '../nav-shell/nav-shell.module';
   declarations: [HomePageComponent],
   imports: [
     CommonModule,
-    SharedModule,
+    SharedModule
     // NavShellModule
     
   ]

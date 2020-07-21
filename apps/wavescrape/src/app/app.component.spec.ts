@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from './shared/shared.module';
-// import { NavShellModule } from './nav-shell/nav-shell.module';
 import { NavShellComponent } from './nav-shell/nav-shell.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomePageComponent } from './home-page/home-page.component';

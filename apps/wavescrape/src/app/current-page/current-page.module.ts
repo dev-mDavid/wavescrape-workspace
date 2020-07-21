@@ -6,18 +6,22 @@ import { CurrentPageComponent } from './current-page.component';
 
 import { BreakListItemComponent } from './current-page-components/break-list-item/break-list-item.component';
 import { CurrentDataItemListComponent } from './current-page-components/current-data-item-list/current-data-item-list.component';
-import { RegionalListItemComponent } from './current-page-components/regional-list-item/regional-list-item.component';
+import { RegionListItemComponent } from './current-page-components/region-list-item/region-list-item.component';
+import { CurrentSharedModule } from './current-shared/current-shared.module';
+
+
 
 @NgModule({
   declarations: [
     CurrentPageComponent, 
     BreakListItemComponent, 
     CurrentDataItemListComponent, 
-    RegionalListItemComponent
+    RegionListItemComponent
   ],
   imports: [
     CommonModule,
-    CurrentPageRoutingModule
+    CurrentPageRoutingModule,
+    CurrentSharedModule
   ]
 })
 export class CurrentPageModule { }

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BreakListItemComponent } from './break-list-item.component';
+import { SharedModule } from '../../../shared/shared.module';
 
 describe('BreakListItemComponent', () => {
   let component: BreakListItemComponent;
@@ -8,7 +9,12 @@ describe('BreakListItemComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BreakListItemComponent ]
+      declarations: [ 
+        BreakListItemComponent
+       ],
+      imports: [
+        SharedModule
+      ]
     })
     .compileComponents();
   }));

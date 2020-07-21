@@ -28,7 +28,6 @@ import { NavShellComponent } from './nav-shell/nav-shell.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    // NavShellModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

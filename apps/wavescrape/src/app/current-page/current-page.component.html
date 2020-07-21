@@ -1,1 +1,57 @@
-<p>current-page works!</p>
+<!-- <div class="wave-page">
+  <mmt-list-item></mmt-list-item>
+  <mmt-list-item></mmt-list-item>
+  <mmt-list-item></mmt-list-item>
+</div> -->
+
+<div class="mmt-current__page">
+
+  <!-- mobile / isHandset -->
+  <div class="f-mobile" *ngIf="(isHandset$ | async) === true">
+    <region-list-item *ngFor="let region of regions" [regionName]=region.name [regionWaterQuality]=region.waterQuality
+      [regionTempSuit]=region.tempSuit [regionWaveSize]=region.waveSize [regionSwellDirection]=region.swellDirection>
+    </region-list-item>
+    <!-- <mmt-list-item></mmt-list-item> -->
+    <!-- <mmt-list-item></mmt-list-item> -->
+    <!-- <mmt-list-item></mmt-list-item> -->
+  </div>
+
+  <!-- tablet / isTablet -->
+  <div class="f-tablet" *ngIf="(isTablet$ | async) === true">
+
+    <div class="l-flexbox__row">
+      <div class="l-flexbox__item l-flexbox__item--1">
+        <div class="l-flexbox__col">
+          <!-- dynamically add breaks under the regions? -->
+          <region-list-item *ngFor="let region of regions" [regionName]=region.name
+            [regionWaterQuality]=region.waterQuality [regionTempSuit]=region.tempSuit [regionWaveSize]=region.waveSize
+            [regionSwellDirection]=region.swellDirection></region-list-item>
+        </div>
+      </div>
+      <div class="l-flexbox__item l-flexbox__item--2">
+        <!-- <mmt-list-item></mmt-list-item> -->
+      </div>
+    </div>
+
+  </div>
+
+  <!-- desktop / isWeb  -->
+  <div class="f-web" *ngIf="(isWeb$ | async) === true">
+    <div class="l-flexbox__row">
+      <div class="l-flexbox__item l-flexbox__item--1">
+        <region-list-item *ngFor="let region of regions" [regionName]=region.name
+          [regionWaterQuality]=region.waterQuality [regionTempSuit]=region.tempSuit [regionWaveSize]=region.waveSize
+          [regionSwellDirection]=region.swellDirection></region-list-item>
+      </div>
+      <div class="l-flexbox__item l-flexbox__item--2">
+        <div *ngFor="let region of regions">
+          <break-list-item *ngFor="let break of region.breaks" [breakName]=break></break-list-item>
+        </div>
+      </div>
+      <div class="l-flexbox__item l-flexbox__item--3">
+        <current-data-item__list></current-data-item__list>
+      </div>
+    </div>
+  </div>
+
+</div>
