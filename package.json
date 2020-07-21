@@ -44,10 +44,12 @@
     "@nestjs/core": "^6.8.3",
     "@nestjs/platform-express": "^6.8.3",
     "@nrwl/angular": "9.2.2",
+    "cheerio": "^1.0.0-rc.3",
     "core-js": "^2.5.4",
     "firebase": "^7.14.4",
     "firestore-jest-mock": "^0.4.0",
     "reflect-metadata": "^0.1.13",
+    "request": "^2.88.2",
     "rxjs": "^6.5.5",
     "zone.js": "^0.10.2"
   },
