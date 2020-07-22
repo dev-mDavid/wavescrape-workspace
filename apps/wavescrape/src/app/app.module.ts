@@ -20,7 +20,7 @@ import { NavShellComponent } from './nav-shell/nav-shell.component';
     NavShellComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     CoreModule,
