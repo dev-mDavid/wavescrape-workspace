@@ -12,7 +12,7 @@
       </mat-toolbar-row>
 
       <mat-toolbar-row class="toolbar--nav-bottom flexbox--bottom">
-        <div class="flex--bottom-item">
+        <div class="flex--bottom-item" routerLink="search">
           <mat-icon>search</mat-icon>
         </div>
         <div class="flex--bottom-item c-nav__link--disabled?">
@@ -74,7 +74,7 @@
           </button>
           <mat-menu #nav="matMenu">
 
-            <button mat-menu-item>
+            <button mat-menu-item routerLink="search">
               <mat-icon>search</mat-icon>
               <span>Search</span>
             </button>
@@ -115,7 +115,7 @@
         <div class="l-toolbar--section l-toolbar--section__2">
           <div class="l-nav c-nav__links">
             <div class="l-nav__link l-nav-link__1 c-nav__links">
-              <a>
+              <a routerLink="search">
                 <!-- <mat-icon>search</mat-icon> &nbsp; -->
                 <span>Search</span>
               </a>
