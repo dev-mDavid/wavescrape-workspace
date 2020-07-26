@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'admin', loadChildren: () => import('./admin-page/admin-page.module').then(m => m.AdminPageModule) },
   { path: 'current', loadChildren: () => import('./current-page/current-page.module').then(m => m.CurrentPageModule) }
+  
 ];
 
 @NgModule({
