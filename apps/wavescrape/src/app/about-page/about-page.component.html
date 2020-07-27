@@ -1,0 +1,45 @@
+<h1>About</h1>
+<h3><i>Find the perfect wave.</i></h3>
+
+<b>Why Build WaveScrape?</b>
+<p>
+  Surfer Talk: As a surfer, one of the biggest challenges is figuring out the best place to paddle out at. And to answer this questions, there's a lot of variables to consider. <br> 
+  • which way the swell is pushing, <br>
+  • how big is the swell, <br>
+  • what are the tide heights, <br> 
+  • what's the water temp, <br>
+  • what's the air temp, <br>
+  • wind conditions, <br>
+  • day light hours, <br>
+  • etc etc. <br>
+  And you can answer this questions <u>accurately</u> by going to specific websites that dial into each variable. I wanted an all inclusive webapp that had the same accurate, dialed-in information.
+</p>
+<p>
+  Nerd Shit:
+  As a software engineer, I wanted to expand my knowledge of code and programming. One method I find most helpful is by building a project that challenges my abilities into fields I'm interested in. In the case of WaveScrape, my primary interests are in learning more about: <br>
+  modern full-stack Javascript app development, <br>
+  clean, orthogonal, & modular codebase structure, <br>
+  automated CI/CD DevOps, <br>
+  cloud/serverless functions, and <br>
+  web scraping. <br>
+  One thing that makes this project unique, is that I'm suiting project to tools because (in this case) I'm more interested in developing my skills with these tools than I am with "delivering a product".
+</p>
+
+<b>How it Works</b>
+<p>
+  Surfer Talk:
+  Essentially for each variable, I find the most accurate website resource. Then I scrape that public information into this webapp. Hence, the name WaveScrape
+</p>
+<p>
+  Nerd Talk:
+  I use Node.js and cloud/serverless functions (with Google Cloud Platform) to scrape others websites' public data with Puppeteer.js. Once data is scraped, it passed into a key-value store (aka noSQL database) with Google's Cloud Firestore. These functions are triggered daily, to scrape the most accurate/recent data. 
+
+  On the frontend I'm using Angular Ivy. When a user queries for certain data, the frontend app calls to that key-value store, returning the queried data.
+</p>
+
+<h3>learn more about the future of WaveScrape</h3>
+
+<h2>Updates</h2>
+<h2>Features</h2>
+<a routerLink="features">Features</a>
+
