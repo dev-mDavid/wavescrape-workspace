@@ -1,64 +1,122 @@
-<h1>Features</h1>
-<h3>"Build the app that you wish existed"</h3>
+<div class="featuresPage" 
+  [ngClass]="{
+    'l-page--isHandset': (isHandset$ | async) === true,
+    'l-page--isTablet': (isTablet$ | async) === true,
+    'l-page--isWeb': (isWeb$ | async) === true
+  }"          
+>
+  <div class="l-aboveTheFold">
 
-<p>About ⟩ Features</p>
+    <h1>Features</h1>    
+    <h3>"Build the app that you wish existed"</h3>
 
-<h2>Primary Features</h2>
+    <p class="l-breadcrumbs">About ⟩ Features</p>
 
-<p>* coming soon</p>
+    <div class="l-featureNav--primary">
+      <a (click)="scrollToDiv(primaryFeatures)">Primary Features:</a><br>
+      <a (click)="scrollToDiv(search)">Search</a> &nbsp; | &nbsp;
+      <a (click)="scrollToDiv(map)">Map</a> &nbsp; | &nbsp;
+      <a (click)="scrollToDiv(current)">Current</a> &nbsp; | &nbsp;
+      <a (click)="scrollToDiv(forecast)">Forecast</a> &nbsp; | &nbsp;
+      <a (click)="scrollToDiv(preferences)">Preferences</a>
+    </div>
 
-<h3>Search*</h3>
-<p>
-  Each break will have certain qualities, this is where you can filter and find the perfect wave for you. For example, if you are learning how to surf you might want to you use the filters 
-  surf-level: beginners
-  crowds: friendly and or small
-  Where as if you are a advance surfer you might use the filters:
-  break-type: point
-  wave-type: barreling
-  prefered-tide: low
-</p>
+    <div class="l-featureNav--secondary">
+      <a (click)="scrollToDiv(secondaryFeatures)">Secondary Features:</a><br>
+      <a (click)="scrollToDiv(signIn)">Sign-In</a> &nbsp; | &nbsp;
+      <a (click)="scrollToDiv(about)">About</a> &nbsp; | &nbsp;
+      <a (click)="scrollToDiv(upvote)">Upvote</a> &nbsp; | &nbsp;
+      <a (click)="scrollToDiv(sponsors)">Sponsors</a>
+    </div>
+    
+  </div>
 
-<h3>Map*</h3>
-<p>
-  This will be where you see a visual map of all the avaiable surf breaks and info about them. Such as
-  synposis of the break (type, crowds),
-  surfer-level (beginner, intermediate, advance),
-  best conditions for this break (swell direction, tides, etc.)
-</p>
-<h3>Current</h3>
-<p>
-  This is the #1 feature to find the perfect wave for the today's conditions. It allows you to easily mentally compare different breaks and waves.
-</p>
+  <div #primaryFeatures>
 
-<h3>Forecast*</h3>
-<p>
-  Current gives you the best information if you want to go surfing today or tomorrow. Forecast gives you the best information if you want to plan your next surf session. This information is based more on the swell <u>predictions</u>.
-</p>
+    <h2>Primary Features</h2>
 
-<h3>Preferences*</h3>
-<p>
-  Each surfer is unique, and I wanted each to have ability to customize this app to how they want to use.  For example, 
-  wetsuit whether might be all the time or when water-temp: > 65%F
-  wavesize might be 2ft or 6ft mainland or head-high
-  push notifications when the swell-directions: South or wave-energy: > 50kj
-</p>
+    <div #search>
+      <h3>Search*</h3>
+      <p>* = coming soon</p>
+      <p>
+        Each break will have certain qualities, this is where you can filter and find the perfect wave for you. For example,
+        if you are learning how to surf you might want to you use the filters
+        surf-level: beginners
+        crowds: friendly and or small
+        Where as if you are a advance surfer you might use the filters:
+        break-type: point
+        wave-type: barreling
+        prefered-tide: low
+      </p>
+    </div>
 
+    <div #map>
+      <h3>Map*</h3>
+      <p>
+        This will be where you see a visual map of all the avaiable surf breaks and info about them. Such as
+        synposis of the break (type, crowds),
+        surfer-level (beginner, intermediate, advance),
+        best conditions for this break (swell direction, tides, etc.)
+      </p>
+    </div>
 
-<h2>Secondary Features</h2>
-<h3>Sign In*</h3>
-<p>
-  This let surfers 
-  keep track of their favorite surf breaks,
-  save their preferences,
-  upvote new features and bug fixes,
-</p>
-<h3>About</h3>
-<p>
-  Learn more WaveScrape's inspiration, story, updates, and features.
-</p>
-<h3>Upvote*</h3>
-<p>
-  Reddit-style community to decide new features and bug to patch.
-</p>
-<h3>Sponsors*</h3>
-<p>A way to share surfing & ocean related products & services</p>
+    <div #current>
+      <h3>Current</h3>
+      <p>
+        This is the #1 feature to find the perfect wave for the today's conditions. It allows you to easily mentally compare different breaks and waves.
+      </p>
+    </div>
+
+    <div #forecast>
+      <h3>Forecast*</h3>
+      <p>
+        Current gives you the best information if you want to go surfing today or tomorrow. Forecast gives you the best information if you want to plan your next surf session. This information is based more on the swell <u>predictions</u>.
+      </p>
+    </div>
+
+    <div #preferences>
+      <h3>Preferences</h3>
+      <p>
+        Each surfer is unique, and I wanted each to have ability to customize this app to how they want to use.  For example, 
+        wetsuit whether might be all the time or when water-temp: > 65%F
+        wavesize might be 2ft or 6ft mainland or head-high
+        push notifications when the swell-directions: South or wave-energy: > 50kj
+      </p>
+    </div>
+    
+  </div>
+
+  <div #secondaryFeatures>
+    <h2>Secondary Features</h2>
+
+    <div #signIn class="l-signIn">
+      <h3>Sign In*</h3>
+      <p>
+        This let surfers 
+        keep track of their favorite surf breaks,
+        save their preferences,
+        upvote new features and bug fixes,
+      </p>
+    </div>
+
+    <div #about>
+      <h3>About</h3>
+      <p>
+        Learn more WaveScrape's inspiration, story, updates, and features.
+      </p>
+    </div>
+
+    <div #upvote>
+      <h3>Upvote*</h3>
+      <p>
+        Reddit-style community to decide new features and bug to patch.
+      </p>  
+    </div>
+
+    <div #sponsors>
+      <h3>Sponsors*</h3>
+      <p>A way to share surfing & ocean related products & services</p>
+    </div>
+
+  </div>
+</div>
